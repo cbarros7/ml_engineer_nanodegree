@@ -10,7 +10,7 @@
 <br>
 
 <p align="center">
-<img src="https://i.imgur.com/mqdArQg.jpeg" alt="Coursera logo">
+<img src="https://i.imgur.com/mqdArQg.jpeg" alt="Structure">
 </p>
 
 <br>
@@ -28,6 +28,14 @@ In order to prove that the model will work correctly, we took as an example the 
 
 <br>
 
+<p align="center">
+<img src="https://github.com/cbarros7/ml_engineer_nanodegree/blob/main/sagemaker_sentiment_analysis/website/deploydemo.gif" alt="Coursera logo">
+</p>
+
+
+<p align="center">
+<img src="https://github.com/cbarros7/ml_engineer_nanodegree/blob/main/sagemaker_sentiment_analysis/website/deploy.gif" alt="Coursera logo">
+</p>
 
 <br>
 
