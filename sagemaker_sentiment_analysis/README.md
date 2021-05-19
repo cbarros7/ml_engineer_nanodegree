@@ -29,12 +29,7 @@ In order to prove that the model will work correctly, we took as an example the 
 <br>
 
 <p align="center">
-<img src="https://github.com/cbarros7/ml_engineer_nanodegree/blob/main/sagemaker_sentiment_analysis/website/deploydemo.gif" alt="Coursera logo">
-</p>
-
-
-<p align="center">
-<img src="https://github.com/cbarros7/ml_engineer_nanodegree/blob/main/sagemaker_sentiment_analysis/website/deploy.gif" alt="Coursera logo">
+<img src="https://github.com/cbarros7/ml_engineer_nanodegree/blob/main/sagemaker_sentiment_analysis/website/deploydemo.JPG" alt="Demo">
 </p>
 
 <br>
