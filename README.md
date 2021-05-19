@@ -12,7 +12,7 @@ The following is the main structure of the program with the projects developed i
 
 **1.) Software Engineering Fundamentals**:
  + **Objective:** Write production-level code and practice object-oriented programming for integration into machine learning projects. 
- + **Project:** [Build a Python package](./package_pypi)
+ + **Project:** [Build a Python package](./package_pypi/basic_algebra_ml)
 
 <br>
 
