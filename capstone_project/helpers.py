@@ -2,7 +2,12 @@ import pandas as pd
 import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
+from sklearn.neighbors import NearestNeighbors
+from random import sample
+from numpy.random import uniform
+from math import isnan
 from sklearn import preprocessing
+
 
 def drop_missing_values(df, column, target_key):
     """
@@ -84,6 +89,42 @@ def plot_percentage(ax, feature):
         y = p.get_y() + p.get_height()
         ax.annotate(percentage, (x, y), size = 12)
     plt.show()
+
+def hopkins(df):
+    """
+    hopkins: Take a dataframe and return the Hopkins statistic.
+    
+    Parameters
+        df: Dataframe that takes the numerical values to extract the Hopkins statistic
+        
+     Return
+         statistics_hopkins: Return of Hopkins statistician
+    """
+
+    d = df.shape[1]
+    # d = len(vars) # columns
+    n = len(df)  # rows
+    m = int(0.1 * n)  # heuristic from article [1]
+    nbrs = NearestNeighbors(n_neighbors=1).fit(df.values)
+
+    rand_df = sample(range(0, n, 1), m)
+
+    ujd = []
+    wjd = []
+    for j in range(0, m):
+        u_dist, _ = nbrs.kneighbors(uniform(np.amin(df, axis=0), np.amax(
+            df, axis=0), d).reshape(1, -1), 2, return_distance=True)
+        ujd.append(u_dist[0][1])
+        w_dist, _ = nbrs.kneighbors(
+            df.iloc[rand_df[j]].values.reshape(1, -1), 2, return_distance=True)
+        wjd.append(w_dist[0][1])
+
+    statistics_hopkins = sum(ujd) / (sum(ujd) + sum(wjd))
+    if isnan(statistics_hopkins):
+        print(ujd, wjd)
+        H = 0
+
+    return statistics_hopkins    
 
 def preprocessing_data(df):
     """
