@@ -99,13 +99,20 @@ def preprocessing_data(df):
     """
     
     
-    num_features = ['age', 'time', 'income']
+    num_features = ['time', 'income']
+    cat_features = ['gender', 'channels', 'reward', 'difficulty', 'duration', 'offer_type']
     
     # Apply RobustScaler
     df[num_features] = preprocessing.RobustScaler().fit_transform(df[num_features])
     
     # Apply MinMaxScaler
     df[num_features] = preprocessing.MinMaxScaler().fit_transform(df[num_features])
+    
+    # Set preprocessor for categorical variables
+    le = preprocessing.LabelEncoder()
+    
+    # Apply LabelEncoder
+    df[cat_features] = df[cat_features].apply(le.fit_transform)
 
     
     return df    
