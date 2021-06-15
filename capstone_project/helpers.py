@@ -69,6 +69,23 @@ def plot_category_variable(data, column):
     plt.suptitle('Frecuency of ' + column)
 
     plot_percentage(ax, data[column])
+
+def plot_cat_num_variable(data, cat, num):
+    """
+    plot_category_variable: Display plot of categorical variables 
+    
+    Paramters
+        column: Name of the column of the dataframe to be displayed
+        
+    Return 
+        None                
+    """
+    
+    plt.figure(figsize=(8, 6)) 
+    ax = sns.barplot(x=cat, y = num, data = data)
+    ax.set_xticklabels(ax.get_xticklabels(), rotation=90)
+    plt.suptitle(cat + ' Vs ' + num)
+    plt.show()
     
 def plot_percentage(ax, feature):
     """
@@ -140,8 +157,8 @@ def preprocessing_data(df):
     """
     
     
-    num_features = ['time', 'income']
-    cat_features = ['gender', 'channels', 'reward', 'difficulty', 'duration', 'offer_type']
+    num_features = ['income', 'avg_spent','total_spent']
+    cat_features = ['gender', 'age_range', 'num_transactions_range', 'bogos_received_range', 'discounts_received_range']
     
     # Apply RobustScaler
     df[num_features] = preprocessing.RobustScaler().fit_transform(df[num_features])
