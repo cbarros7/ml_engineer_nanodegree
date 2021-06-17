@@ -158,7 +158,9 @@ def preprocessing_data(df):
     
     
     num_features = ['income', 'avg_spent','total_spent']
-    cat_features = ['gender', 'age_range', 'num_transactions_range', 'bogos_received_range', 'discounts_received_range']
+    #cat_features = ['gender', 'age_range', 'num_transactions_range', 'bogos_received_range', 'discounts_received_range', 'percent_viewed_range', 'percent_completed_range']
+    
+    cat_features = ['gender', 'age_range', 'num_transactions_range', 'bogos_received_range', 'discounts_received_range', 'percent_viewed_range', 'percent_completed_range', 'discount_percent_completed_range', 'bogo_percent_completed_range']
     
     # Apply RobustScaler
     df[num_features] = preprocessing.RobustScaler().fit_transform(df[num_features])
