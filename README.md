@@ -24,13 +24,13 @@ The following is the main structure of the program with the projects developed i
 
  **3.) Machine Learning Case Studies**:
  + **Objective:** Apply machine learning techniques to solve real-world tasks; explore data and deploy both built-in and custom-made Amazon SageMaker models. 
- + **Project:** Plagiarism detector
+ + **Project:** [Plagiarism detector](./plagiarism_detector)
 
 <br>
 
 **4.) Machine Learning Capstone**:
  + **Objective:** Select a machine learning challenge and propose a possible solution.
- + **Project:** Capstone project
+ + **Project:** [Capstone project](./capstone_project)
 
 <br>
 
