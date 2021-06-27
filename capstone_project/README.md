@@ -72,7 +72,7 @@ The following files attached to this GitHub's repository include the following a
 
  - [**Final report.pdf**](./Final_report.pdf): This PDF document contains all my final results and analyses as performed in the accompanying Jupyter notebook above.
 
- - [**Proposal Capstone Project.pdf**](./Proposal_Capstone_Project): This document contains the initial project proposal I submitted prior to necessarily beginning this project.
+ - [**Proposal Capstone Project.pdf**](./Proposal_Capstone_Project.pdf): This document contains the initial project proposal I submitted prior to necessarily beginning this project.
 
  - [**data**](./data/): This folder contains the three JSON files provided by Starbucks / Udacity as noted above.
 
