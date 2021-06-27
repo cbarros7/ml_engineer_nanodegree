@@ -89,8 +89,6 @@ In this project, different resources were used both in cloud and on-premise. The
 
 <br>
 
-La herramienta de visualización para graficar los principales resultados fue Tableau en la versión desktop. Las imagenes con las respectivas interpretaciones se encuentran dentro en el
-
 
 ## Conclusions
 
